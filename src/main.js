@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './App.vue';
 import './registerServiceWorker';
 import Toasted from 'vue-toasted';
+import router from './router'
 // import VueRouter from 'vue-router';
 // import TodoList from './components/TodoList';
 
@@ -32,4 +33,7 @@ Vue.use(Toasted);
 // 	routes, // short for `routes: routes`
 // });
 
-new Vue({ render: (h) => h(App) }).$mount('#app');
+new Vue({
+  router,
+  render: (h) => h(App)
+}).$mount('#app');

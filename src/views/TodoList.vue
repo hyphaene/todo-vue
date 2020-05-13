@@ -1,7 +1,6 @@
 <template>
-	<div class="hello">
-		<h1>{{ msg }}</h1>
-
+	<div class="hello" id="nav">
+		<li><router-link to="/">Go back to home</router-link></li>
 		<ul>
 			<TodoItem v-for="todo in todos" :key="todo" :todo="todo" :remove="remove" />
 		</ul>
@@ -10,8 +9,9 @@
 </template>
 
 <script>
-import TodoItem from './TodoItem';
-import AddTodo from './AddTodo';
+import TodoItem from '@/components/todos/TodoItem';
+import AddTodo from '@/components/todos/AddTodo';
+
 const todos = ['jjijji', 'hello', 'coucou'];
 export default {
 	name: 'TodoList',
@@ -86,5 +86,18 @@ export default {
 ul {
 	list-style-type: none;
 	padding: 0;
+}
+
+#nav {
+	padding: 30px;
+
+	a {
+		font-weight: bold;
+		color: #2c3e50;
+
+		&.router-link-exact-active {
+			color: #42b983;
+		}
+	}
 }
 </style>

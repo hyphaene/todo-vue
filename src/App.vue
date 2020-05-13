@@ -1,18 +1,14 @@
 <template>
 	<div id="app">
-		<img alt="Vue logo" src="./assets/logo.png" />
-		<Menu msg="Welcome to Your Vue.js App" />
+		<Menu msg="coucou" />
+		<!-- <router-view /> -->
 	</div>
 </template>
-
 <script>
-import Menu from './components/Menu.vue';
-
+import Menu from '@/components/Menu.vue';
 export default {
 	name: 'App',
-	components: {
-		Menu,
-	},
+	components: { Menu },
 };
 </script>
 
@@ -23,6 +19,5 @@ export default {
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
 	color: #2c3e50;
-	margin-top: 60px;
 }
 </style>
