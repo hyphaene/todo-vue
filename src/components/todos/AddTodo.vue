@@ -1,29 +1,28 @@
 <template>
-	<!-- <li>{{ todo }}</li> -->
 	<div>
 		<input type="text" v-model="todo" />
-		<button type="button" @click="onSubmit(todo)">cocou</button>
+		<button type="button" @click="onSubmit(todo)">coucou</button>
 	</div>
 </template>
 
 <script>
 export default {
-	name: 'AddTodo',
+	name: "AddTodo",
 	props: {
-		submit: Function,
+		submit: Function
 	},
 	data: function(see) {
 		console.log({ see });
 		return {
-			todo: '',
+			todo: ""
 		};
 	},
 	methods: {
 		onSubmit: function(todo) {
-			this.submit(todo);
-			this.todo = '';
-		},
-	},
+			this.submit({ title: todo });
+			this.todo = "";
+		}
+	}
 };
 </script>
 

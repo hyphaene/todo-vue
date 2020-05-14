@@ -1,10 +1,9 @@
 <template>
 	<div>
 		<h1>{{ msg }}</h1>
-		<!-- <li><router-link to="/">/</router-link></li>
-		<li><router-link to="/todos">go to Todos</router-link></li> -->
-		<!-- <li><router-link to="/bar">/bar</router-link></li> -->
-		<router-view></router-view>
+		<transition name="fade" mode="out-in">
+			<router-view></router-view>
+		</transition>
 	</div>
 </template>
 
@@ -32,5 +31,16 @@ li {
 }
 a {
 	color: #42b983;
+}
+.fade-enter-active,
+.fade-leave-active {
+	transition-duration: 0.3s;
+	transition-property: opacity;
+	transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+	opacity: 0;
 }
 </style>

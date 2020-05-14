@@ -1,26 +1,35 @@
 <template>
-	<!-- <Fragment> -->
 	<div>
-		<li>{{ todo }}</li>
+		<li @click="click(todo.id)">{{ todo.title }}</li>
+		<label for="todo">
+			completed
+			<input
+				type="checkbox"
+				:checked="todo.completed"
+				name="todo"
+				id="todo"
+				@change="toggleCompleted(todo)"
+			/>
+		</label>
 		<button @click="remove(todo)">Supprimer</button>
 	</div>
-	<!-- </Fragment> -->
 </template>
 
 <script>
-// import { Fragment } from 'vue-fragment';
-
 export default {
-	name: 'TodoItem',
+	name: "TodoItem",
 	props: {
-		todo: String,
+		todo: {
+			id: String,
+			title: String
+		},
 		remove: Function,
-	},
-	// components: { Fragment },
+		click: Function,
+		toggleCompleted: Function
+	}
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 li {
 	margin: 0 10px;
