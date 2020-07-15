@@ -1,13 +1,19 @@
-import Vue from 'vue';
-import App from './App.vue';
-import './registerServiceWorker';
-import Toasted from 'vue-toasted';
-import router from './router';
+import Vue from "vue";
+import App from "./App.vue";
+import "./registerServiceWorker";
+import Toasted from "vue-toasted";
+import router from "./router";
 
 Vue.config.productionTip = false;
 Vue.use(Toasted);
 
 new Vue({
 	router,
-	render: (h) => h(App),
-}).$mount('#app');
+	render: h => h(App)
+}).$mount("#app");
+
+console.log("app inited !");
+console.log("app inited !");
+console.log("app inited !");
+console.log("app inited !");
+console.log("app inited !");

@@ -1,0 +1,1 @@
+docker run -p 8080:80 --rm --name vukub --network netkub vukub:latest

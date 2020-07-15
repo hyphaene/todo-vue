@@ -61,6 +61,7 @@ export default {
 		add: function(todo) {
 			add.bind(this)(todo);
 		},
+
 		remove: function(todo) {
 			remove.bind(this)(todo);
 		},
